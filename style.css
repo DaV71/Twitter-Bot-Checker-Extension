@@ -1,0 +1,14 @@
+#botChecker {
+    font-size: 18px;
+    font-weight: bold;
+    outline: none;
+    margin: 10px;
+    border: none;
+    border-radius: 2px;
+}
+
+body {
+    background-color: burlywood;
+    text-align: center;
+    width: max-content;
+}

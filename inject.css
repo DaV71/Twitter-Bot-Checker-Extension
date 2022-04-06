@@ -1,0 +1,31 @@
+.userCheckData {
+    position:absolute;
+    width:200px;
+    height:300px;
+    opacity:0.9;
+    z-index:100;
+    background:rgb(44, 44, 44);
+    color: white;
+    border-radius: 4px;
+    border: 1px solid rgb(10, 10, 10);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 10px;
+}
+
+.happy {
+    filter: invert(35%) sepia(34%) saturate(4272%) hue-rotate(97deg) brightness(103%) contrast(98%);
+}
+
+.sceptic {
+    filter: invert(53%) sepia(71%) saturate(551%) hue-rotate(344deg) brightness(90%) contrast(95%);
+}
+
+.sad {
+    filter: invert(15%) sepia(100%) saturate(6638%) hue-rotate(2deg) brightness(110%) contrast(119%);
+}
+
+.mark {
+    position: absolute;
+    top: 10px;
+    left: 146px;
+}
