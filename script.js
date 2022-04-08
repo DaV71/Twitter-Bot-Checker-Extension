@@ -192,7 +192,7 @@ const success = res => res.ok ? res.json() : Promise.resolve({});
 const prepareBody = (timeline, mentions, userLogin) => {
   const body = {
     "timeline": timeline,
-    "mentions": mentions,
+    "mentions": mentions.statuses,
     "user": {
       "id_str": timeline[0]?.user?.id_str,
       "screen_name": userLogin,
@@ -206,7 +206,7 @@ const fetchTimeline = (userLogin) => {
     method: 'GET',
     headers: twitterApiHeaders,
   };
-  return fetch(`https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=${userLogin}`, options)
+  return fetch(`https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=${userLogin}&count=200`, options)
     .then(success);  
 }
 
@@ -215,6 +215,6 @@ const fetchMentions = (userLogin) => {
     method: 'GET',
     headers: twitterApiHeaders,
   };
-  return fetch(`https://api.twitter.com/1.1/search/tweets.json?q=@${userLogin}`, options)
+  return fetch(`https://api.twitter.com/1.1/search/tweets.json?q=@${userLogin}&count=100`, options)
     .then(success);
 }
